@@ -1,0 +1,45 @@
+.report-entries {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 3vw;
+}
+.report {
+  font-family: 'Raleway', sans-serif;
+  padding: 2vmin;
+  width: 100%;
+}
+
+.report-row {
+  margin: 1vh 0;
+}
+
+.report-header {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.report-message { }
+
+.report-icon {
+  padding-right: 2vh;
+}
+
+.info, .normal, .major {
+  border-left-width: 5px;
+  border-left-style: solid;
+}
+
+.info {
+  border-left-color: #2979FF;
+}
+
+.normal {
+  border-left-color: #FFEA00;
+}
+
+.major {
+  border-left-color: #FF3D00;
+}
