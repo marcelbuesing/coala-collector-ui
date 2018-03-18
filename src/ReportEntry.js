@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import './BoxShadow.css';
-import './Report.css';
+import React, { Component } from "react";
+import "./BoxShadow.css";
+import "./Report.css";
 
 const toSeverityClass = severity => {
   switch (severity) {
@@ -24,14 +24,18 @@ class ReportEntry extends Component {
       <div className={"report card card-3 " + severity}>
         <div className="report-row report-header">
           <div>
-            <span className="report-icon entypo-attention" data-text="attention"></span>
+            <span
+              className="report-icon entypo-attention"
+              data-text="attention"
+            />
             <span className="report-message">{entry.message}</span>
           </div>
           <span className="report-date">{date.toLocaleString()}</span>
         </div>
         <div className="report-row">
-          <span className="report-icon entypo-code" data-text="code"></span>
-          <span>/home/marcel/gitlab-private/vehicle_signal_specification/tools/vspec2proto.py
+          <span className="report-icon entypo-code" data-text="code" />
+          <span>
+            /home/marcel/gitlab-private/vehicle_signal_specification/tools/vspec2proto.py
           </span>
         </div>
         <div className="report-row">
@@ -40,7 +44,7 @@ class ReportEntry extends Component {
           </p>
         </div>
         <div className="report-row">
-          <span className="report-icon entypo-tag" data-text="tag"></span>
+          <span className="report-icon entypo-tag" data-text="tag" />
           <span>PyLintBear (W0621)"</span>
         </div>
       </div>
