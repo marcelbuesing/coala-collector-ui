@@ -20,6 +20,7 @@ class ReportEntry extends Component {
     let severity = toSeverityClass(entry.severity);
     let date = new Date();
     date.setTime(createdAt * 1000);
+    const file_url = entry.affected_code[0].start.file; //  + "#L" + entry.affected_code[0].start.line
     return (
       <div className={"report card card-3 " + severity}>
         <div className="report-row report-header">
@@ -35,7 +36,9 @@ class ReportEntry extends Component {
         <div className="report-row">
           <span className="report-icon entypo-code" data-text="code" />
           <span>
-            /home/marcel/gitlab-private/vehicle_signal_specification/tools/vspec2proto.py
+            <a className="report-file" href={file_url} target="_blank">
+              {file_url}
+            </a>
           </span>
         </div>
         <div className="report-row">
@@ -45,7 +48,7 @@ class ReportEntry extends Component {
         </div>
         <div className="report-row">
           <span className="report-icon entypo-tag" data-text="tag" />
-          <span>PyLintBear (W0621)"</span>
+          <span>{entry.origin}</span>
         </div>
       </div>
     );

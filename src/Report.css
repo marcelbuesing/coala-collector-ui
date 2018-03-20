@@ -23,6 +23,8 @@
 
 .report-message { }
 
+.report-file { color: black; }
+
 .report-icon {
   padding-right: 2vh;
 }
